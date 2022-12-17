@@ -1,2 +1,2 @@
 # freecodecamp-solutions
-My solutions to the [https://www.freecodecamp.org/](freeCodeCamp.org) certification projects.
+My solutions to the [freeCodeCcamp.org](https://www.freecodecamp.org/) certification projects.
