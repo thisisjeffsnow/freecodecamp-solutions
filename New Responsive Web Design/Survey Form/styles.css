@@ -1,3 +1,8 @@
+* {
+    /* outline: 1px solid red; */
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Arial Narrow", "Open Sans", sans-serif;
     background-color: #0A2342;
@@ -5,11 +10,17 @@ body {
   }
   
   p {
-    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
   }
-  
+
   header {
     text-align: center;
+  }
+
+  header > p {
+    font-size: 20px;
+    padding: 20px;
   }
   
   h1 {
@@ -19,22 +30,21 @@ body {
   }
   
   form {
-    padding: 20px;
+    padding: 0px 20px 20px 20px;
     border-radius: 10px;
     font-size: 24px;
     font-weight: bold;
     box-shadow: 4px 4px 10px 0px black;
     margin: 0 auto;
-    max-width: 500px;
+    max-width: 700px;
     width: 80%;
     background-color: #ffffff10;
   }
   
   input,
   select,
-  textarea {
+  textarea, button {
     display: block;
-    margin: 2px 0 40px 0;
     width: 100%;
     font-size: 16px;
     font-weight: 800;
@@ -48,7 +58,6 @@ body {
   label {
     display: block;
     padding: 0px;
-    margin: 0px;
   }
   
   label.choices {
@@ -63,17 +72,20 @@ body {
     display: inline;
     margin: 12px 4px 2px 0;
   }
+
+  div.question {
+    margin: 40px 0px;
+  }
   
   fieldset {
     border: 0px;
-    padding: 12px 5px;
-    margin: 1rem 0;
+    /* border-bottom: 2px dotted black;
+    padding: 30px 0px 30px 0px; */
   }
   
-  input[type="submit"] {
+  button {
     padding: 20px;
     font-size: 24px;
     border: 1px solid white;
     background-color: #ffffff10;
-    margin: -20px 0;
   }

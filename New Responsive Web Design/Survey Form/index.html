@@ -9,48 +9,95 @@
 </head>
 
 <body>
+
     <header>
-    <h1 id="title">Survey Form</h1>
-    <p id="description">Thank you for taking the time to complete this survey.</p>
+        <h1 id="title">Survey Form</h1>
+        <p id="description">Thank you for taking the time to complete this survey.</p>
     </header>
-    <form action="" method="post" id="survey-form">
-        <fieldset>
-            <label id="name-label" for="name">Name<input id="name" type="text" required
-                    placeholder="Enter your name"></label>
-            <label id="email-label" for="email">E-Mail<input id="email" type="email" placeholder="Enter your e-mail"
-                    required></label>
-            <label id="number-label" for="age">Age (optional)<input id="number" type="number" min="10" max="120"
-                    placeholder="Enter your age"></label>
-            Which option best describes your current role?
-            <select id="dropdown">
-                <option name="role">Select current role</option>
-                <option name="role">Student</option>
-                <option name="role">Full Time Job</option>
-                <option name="role">Full Time Learner</option>
-                <option name="role">Rather Not Say</option>
-                <option name="role">Other</option>
-            </select>
-            Would you recommend freeCodeCamp to a friend?
-            <label class="choices" for="definitely"><input type="radio" name="recommend" id="definitely" value="definitely">
-                Definitely</label>
-            <label class="choices" for="maybe"><input type="radio" name="recommend" id="maybe" value="maybe"> Maybe</label>
-            <label class="choices" for="notsure"><input type="radio" name="recommend" id="notsure" value="notsure" checked> Not
-                Sure</label>
-        </fieldset>
-        <fieldset>
-            What would you like to see improved? (Check all that apply)
-            <label class="choices" for="front-end"><input type="checkbox" value="front-end"> Front-End Projects</input></label>
-            <label class="choices" for="back-end"><input type="checkbox" value="back-end"> Back-End Projects</input></label>
-        </fieldset>
-        <fieldset>
-            Additional Comments
-            <label for="comments"><textarea id="comments" name="comments"
-                    placeholder="I love this so much..."></textarea></label>
-        </fieldset>
-        <fieldset>
-            <input type="submit" id="submit" value="Submit">
-        </fieldset>
-    </form>
+
+    <main>
+        <form action="" method="post" id="survey-form">
+
+            <!-- Demographics -->
+            <fieldset>
+
+                <div class="question">
+                    <label id="name-label" for="name">Name<input id="name" type="text" required
+                            placeholder="Enter your name"></label>
+                </div>
+                <div class="question">
+                    <label id="email-label" for="email">Email<input id="email" type="email"
+                            placeholder="Enter your Email" required></label>
+                </div>
+                <div class="question">
+                    <label id="number-label" for="age">Age (optional)<input id="number" type="number" min="10" max="150"
+                            placeholder="Enter your age"></label>
+                </div>
+
+                <div class="question">
+                    <p>Which option best describes your current role?</p>
+                    <select name="current-role" id="current-role" required>
+                        <option name="role" value="">Select current role</option>
+                        <option name="role" value="student">Student</option>
+                        <option name="role" value="full-time-job">Full Time Job</option>
+                        <option name="role" value="full-time-learner">Full Time Learner</option>
+                        <option name="role" value="rather-not-say">Rather Not Say</option>
+                        <option name="role" value="other">Other</option>
+                    </select>
+                </div>
+
+                <!-- Opinion Questions-->
+                <div class="question">
+                    <p>Would you recommend freeCodeCamp to a friend?</p>
+                    <label class="choices" for="definitely"><input type="radio" name="recommend" id="definitely"
+                            value="definitely">
+                        Definitely</label>
+                    <label class="choices" for="maybe"><input type="radio" name="recommend" id="maybe" value="maybe">
+                        Maybe</label>
+                    <label class="choices" for="notsure"><input type="radio" name="recommend" id="notsure"
+                            value="notsure"> Not
+                        Sure</label>
+                </div>
+
+                <div class="question">
+                    <p>What would you like to see improved? (Check all that apply)</p>
+                    <label class="choices" for="front-end"><input type="checkbox" value="front-end"> Front-End
+                        Projects</input></label>
+                    <label class="choices" for="back-end"><input type="checkbox" value="back-end"> Back-End
+                        Projects</input></label>
+                    <label class="choices" for="data-visualization"><input type="checkbox" value="data-visualization">
+                        Data
+                        Visualization</input></label>
+                    <label class="choices" for="challenges"><input type="checkbox" value="challenges">
+                        Challenges</input></label>
+                    <label class="choices" for="open-source-community"><input type="checkbox"
+                            value="open-source-community">
+                        Open Source Community</input></label>
+                    <label class="choices" for="gitter-help-rooms"><input type="checkbox" value="gitter-help-rooms">
+                        Gitter
+                        Help Rooms</input></label>
+                    <label class="choices" for="Videos"><input type="checkbox" value="Videos"> Videos</input></label>
+                    <label class="choices" for="city-meetups"><input type="checkbox" value="city-meetups"> City
+                        Meetups</input></label>
+                    <label class="choices" for="wiki"><input type="checkbox" value="wiki"> Wiki</input></label>
+                    <label class="choices" for="forum"><input type="checkbox" value="forum"> Forum</input></label>
+                    <label class="choices" for="additional-courses"><input type="checkbox" value="additional-cousres">
+                        Additional Courses</input></label>
+                </div>
+
+                <!-- Open-ended Questions -->
+                <div class="question">
+                    <p>Additional Comments</p>
+                    <label for="comments"><textarea id="comments" name="comments"
+                            placeholder="I love this so much..."></textarea></label>
+                </div>
+
+            </fieldset>
+
+            <button type="submit">Send</button>
+
+        </form>
+    </main>
 </body>
 
 </html>
