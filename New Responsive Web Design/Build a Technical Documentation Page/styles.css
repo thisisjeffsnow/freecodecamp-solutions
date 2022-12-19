@@ -1,0 +1,27 @@
+#navbar {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+}
+
+#main-doc {
+    position: absolute;
+    margin-left: 310px;
+}
+
+@media (max-width: 675px) {
+    #navbar {
+        position: absolute;
+        max-height: 275px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border: 1px solid black;
+    }
+
+    #main-doc {
+        position: relative;
+        margin-left: 0;
+        margin-top: 300px;
+    }
+}
