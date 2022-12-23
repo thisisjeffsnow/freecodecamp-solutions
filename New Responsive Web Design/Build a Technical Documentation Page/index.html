@@ -1,81 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
     <title>Technical Documentation Page</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <nav id="navbar">
-        <header>PHP Comments</header>
-        <ul>
-            <li><a class="nav-link" href="#introduction">Introduction</a></li>
-            <li><a class="nav-link" href="#single_line_comments">Single-Line Comments</a></li>
-            <li><a class="nav-link" href="#multiple_line_comments">Multiple-Line Comments</a></li>
-            <li><a class="nav-link" href="#spicy_comments">Spicy Comments</a></li>
-            <li><a class="nav-link" href="#learn_more">Learn More</a></li>
-        </ul>
+      <header>PHP Comments</header>
+      <ul>
+        <li><a class="nav-link" href="#introduction">Introduction</a></li>
+        <li>
+          <a class="nav-link" href="#single_line_comments"
+            >Single Line Comments</a
+          >
+        </li>
+        <li>
+          <a class="nav-link" href="#multiple_line_comments"
+            >Multiple Line Comments</a
+          >
+        </li>
+        <li>
+          <a class="nav-link" href="#advanced_comments">Advanced Comments</a>
+        </li>
+        <li><a class="nav-link" href="#learn_more">Learn More</a></li>
+      </ul>
     </nav>
     <main id="main-doc">
-        <section class="main-section" id="introduction">
-            <header>Introduction</header>
-            <p>Code is typically written once but read by many. Current or future team members will read the code. In an
-                open source project, many more folks including end users may read the code. Therefore, code readability
-                is important. Sometimes when the code alone doesn't provide context or clarify intent, the developer may
-                write extra descriptions. These descriptions are called code comments. There are many reasons you should
-                use comments in your code:</p>
-            <ul>
-                <li>Code comments enhance readability. They facilitate code reviews, refactoring, and maintenance.</li>
-                <li>Code comments are ignored by compilers and interpreters when producing the final executable. Thus,
-                    they incur no runtime performance overhead.</li>
-            </ul>
-            <p>All modern languages support code comments. Different languages have different syntaxes. Comments can be
-                single-line or multi-line.</p>
-        </section>
-        <section class="main-section" id="single_line_comments">
-            <header>Single-Line Comments</header>
-            <p>Paragraph 1</p>
-            <p>Paragraph 2</p>
-            <code>Code 1</code>
-            <ul>
-                <li>List Item 1</li>
-                <li>List Item 2</li>
-            </ul>
-        </section>
-        <section class="main-section" id="multiple_line_comments">
-            <header>Multiple-Line Comments</header>
-            <p>Paragraph 1</p>
-            <p>Paragraph 2</p>
-            <code>Code 1</code>
-            <ul>
-                <li>List Item 1</li>
-                <li>List Item 2</li>
-            </ul>
-        </section>
-        <section class="main-section" id="spicy_comments">
-            <header>Spicy Comments</header>
-            <p>Paragraph 1</p>
-            <p>Paragraph 2</p>
-            <code>Code 1</code>
-            <ul>
-                <li>List Item 1</li>
-                <li>List Item 2</li>
-            </ul>
-        </section>
-        <section class="main-section" id="learn_more">
-            <header>Learn More</header>
-            <p>Paragraph 1</p>
-            <p>Paragraph 2</p>
-            <code>Code 1</code>
-            <ul>
-                <li>List Item 1</li>
-                <li>List Item 2</li>
-            </ul>
-        </section>
-    </main>
-</body>
+      <section class="main-section" id="introduction">
+        <header>Introduction</header>
+        <p>
+          Code is typically written once but read by many. Current or future
+          team members will read the code. In an open source project, many more
+          folks including end users may read the code. Therefore, code
+          readability is important. Sometimes when the code alone doesn't
+          provide context or clarify intent, the developer may write extra
+          descriptions. These descriptions are called code comments. There are
+          many reasons you should use comments in your code:
+        </p>
+        <ul>
+          <li>
+            Code comments enhance readability. They facilitate code reviews,
+            refactoring, and maintenance.
+          </li>
+          <li>
+            Code comments are ignored by compilers and interpreters when
+            producing the final executable. Thus, they incur no runtime
+            performance overhead.
+          </li>
+        </ul>
+        <p>
+          All modern languages support code comments. Different languages have
+          different syntaxes. Comments can be single-line or multi-line.
+        </p>
+      </section>
+      <section class="main-section" id="single_line_comments">
+        <header>Single Line Comments</header>
+        <p>
+          Single-line PHP comments are useful for short notes before a code
+          block or for explaining a single line of code. To leave a single-line
+          comment, type two forward slashes (//) followed by your comment text.
+          All text to the right of the // will be ignored. You can also use a
+          hash symbol (#) instead of // to make a single-line comment.
+        </p>
+        <ul>
+          <li>
+            The "one-line" comment styles only comment to the end of the line or
+            the current block of PHP code, whichever comes first. This means
+            that HTML code after // ... ?&gt; or # ... ?&gt; WILL be printed.
+          </li>
+          <li>
+            ?&gt; breaks out of PHP mode and returns to HTML mode, and // or #
+            cannot influence that.
+          </li>
+        </ul>
+        <code
+          ><span style="color: #000000">
+            &lt;h1&gt;This&nbsp;is&nbsp;an&nbsp;<span style="color: #0000bb"
+              >&lt;?php&nbsp;</span
+            ><span style="color: #ff8000">#&nbsp;echo&nbsp;'simple';</span
+            ><span style="color: #0000bb">?&gt;</span
+            >&nbsp;example&lt;/h1&gt;<br />&lt;p&gt;The&nbsp;header&nbsp;above&nbsp;will&nbsp;say&nbsp;'This&nbsp;is&nbsp;an&nbsp;&nbsp;example'.&lt;/p&gt;</span
+          ></code
+        >
+        <p>
+          It is worth mentioning that HTML comments have no meaning in the PHP
+          parser. &lt;!-- function(); --&gt; will still execute the function
+          regardless.
+        </p>
+      </section>
+      <section class="main-section" id="multiple_line_comments">
+        <header>Multiple Line Comments</header>
+        <p>
+          PHP also allows for comments that span multiple lines, in case you
+          want to comment out a larger section of code or leave a more
+          descriptive comment. Start your multiline comment by writing /* and
+          end it by writing */.
+        </p>
+        <code
+          ><span style="color: #000000">
+            <span style="color: #0000bb"
+              >&lt;?php<br />&nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span style="color: #007700">echo&nbsp;</span
+            ><span style="color: #dd0000">'This&nbsp;is&nbsp;a&nbsp;test'</span
+            ><span style="color: #007700">;&nbsp;</span
+            ><span style="color: #ff8000"
+              >//&nbsp;This&nbsp;is&nbsp;a&nbsp;one-line&nbsp;c++&nbsp;style&nbsp;comment<br />&nbsp;&nbsp;&nbsp;&nbsp;/*&nbsp;This&nbsp;is&nbsp;a&nbsp;multi&nbsp;line&nbsp;comment<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yet&nbsp;another&nbsp;line&nbsp;of&nbsp;comment&nbsp;*/<br />&nbsp;&nbsp;&nbsp;&nbsp;</span
+            ><span style="color: #007700">echo&nbsp;</span
+            ><span style="color: #dd0000"
+              >'This&nbsp;is&nbsp;yet&nbsp;another&nbsp;test'</span
+            ><span style="color: #007700"
+              >;<br />&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;</span
+            ><span style="color: #dd0000">'One&nbsp;Final&nbsp;Test'</span
+            ><span style="color: #007700">;&nbsp;</span
+            ><span style="color: #ff8000"
+              >#&nbsp;This&nbsp;is&nbsp;a&nbsp;one-line&nbsp;shell-style&nbsp;comment<br /></span
+            ><span style="color: #0000bb">?&gt;</span>
+          </span>
+        </code>
+        <p>
+          'C' style comments end at the first */ encountered. Make sure you
+          don't nest 'C' style comments. It is easy to make this mistake if you
+          are trying to comment out a large block of code.
+        </p>
+      </section>
+      <section class="main-section" id="advanced_comments">
+        <header>Advanced Comments</header>
+        <p>
+          Programmers often add their own personal style to comments. Comments
+          can come in all sorts of shapes and sizes. Try some of these examples.
+        </p>
+        <code>
+          <pre><span style="color: #0000bb"
+            >&lt;?php</span>
+<span style="color: #FF8000">
+//======================
+// CATEGORY LARGE FONT
+//======================
 
+//----------------------------
+// Sub-Category Smaller Font
+//----------------------------
+
+/* Title Here Notice the First Letters are Capitalized */
+
+# Option 1
+# Option 2
+# Option 3
+
+/*
+* This is a detailed explanation
+* of something that should require
+* several paragraphs of information.
+*/
+
+// This is a single line quote.</span></pre>
+        </code>
+        <p>DocBlock</p>
+        <ul>
+          <li>
+            Using a DocBlock you are able to effectively document your
+            application's API (Application Programming Interface) by describing
+            the function of, and relations between, elements in your source
+            code, such as classes and methods.
+          </li>
+          <li>
+            In reality a DocBlock is in fact the name for a combination of a,
+            so-called, DocComment and a block of the PHPDoc Domain Specific
+            Language (DSL). A DocComment is the container that contains
+            documentation that can be formatted according to the PHPDoc
+            reference.
+          </li>
+        </ul>
+        <code>
+          <pre><span style="color: #0000bb;">&lt;?php</span>
+<span style="color:#FF8000;">
+/**
+ * A summary informing the user what the associated element does.
+ *
+ * A *description*, that can span multiple lines, to go _in-depth_ into
+ * the details of this element and to provide some background information
+ * or textual references.
+ *
+ * @param string $myArgument With a *description* of this argument,
+ *                           these may also span multiple lines.
+ *
+ * @return void
+ */</span>
+ function myFunction($myArgument)
+ {
+ }
+</pre>
+        </code>
+        <p>Deactivating Code</p>
+        <p>
+          PHP comments can be used to temporarily deactivate particular sections
+          of code for debugging purposes. Say you discover an error originating
+          somewhere in your PHP file — you can “comment out” a part of the code,
+          rerun the program, and see if the error still occurs. This is much
+          easier (and safer) than deleting lines of code when debugging.
+        </p>
+        <code>
+          <pre><span style="color: #0000bb;">&lt;?php</span>
+
+if ($test_var == 100) {
+    <span style="color: #FF8000;">// echo "Made it here";  This won't execute.</span>
+    ... other code
+} else {
+    <span style="color: #FF8000;"># var_dump($data_set); This won't either.</span>
+    ... other code
+}</pre>
+        </code>
+      </section>
+      <section class="main-section" id="learn_more">
+        <header>Learn More</header>
+        <p>
+          There are many more resources about PHP comments available on the web.
+        </p>
+        <ul>
+          <li>
+            <a
+              target="_blank"
+              href="https://developer.adobe.com/commerce/php/coding-standards/docblock/"
+              >The DocBlock standard</a
+            >
+          </li>
+          <li><a target="_blank" href="https://www.php.net">PHP.net</a></li>
+        </ul>
+      </section>
+    </main>
+  </body>
 </html>
